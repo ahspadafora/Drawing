@@ -64,6 +64,18 @@ struct Triangle: Shape {
     }
 }
 
+struct Arrow: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.midX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+        path.addRect(CGRect(x: rect.midX - (30/2), y: rect.maxY, width: 30, height: 60))
+        return path
+    }
+}
+
 struct Trapezoid: Shape {
     var insetAmount: CGFloat
     
@@ -120,25 +132,38 @@ struct ContentView: View {
     @State private var rows = 4
     @State private var columns = 4
     
-    public var animatableData: AnimatablePair<Double, Double> {
+    @State private var lineWidth: CGFloat = 10
+    public var animatableData: CGFloat {
         get {
-            AnimatablePair(Double(rows), Double(columns))
+            return self.lineWidth
         }
         set {
-            self.rows = Int(newValue.first)
-            self.columns = Int(newValue.second)
+            self.lineWidth = newValue
         }
     }
+//    public var animatableData: AnimatablePair<Double, Double> {
+//        get {
+//            AnimatablePair(Double(rows), Double(columns))
+//        }
+//        set {
+//            self.rows = Int(newValue.first)
+//            self.columns = Int(newValue.second)
+//        }
+//    }
     
     
     var body: some View {
-        Checkerboard(rows: rows, columns: columns).onTapGesture {
-            withAnimation(.linear(duration: 3)) {
-                self.rows = 8
-                self.columns = 16
+//        Checkerboard(rows: rows, columns: columns).onTapGesture {
+//            withAnimation(.linear(duration: 3)) {
+//                self.rows = 8
+//                self.columns = 16
+//            }
+//        }
+        Arrow().stroke(Color.red, style: StrokeStyle(lineWidth: self.lineWidth, lineCap: .round, lineJoin: .round)).frame(width: 200, height: 200).onTapGesture {
+            withAnimation {
+                self.lineWidth = self.lineWidth + 5
             }
         }
-        
         
 //        Trapezoid(insetAmount: insetAmount).frame(width: 200, height: 100).onTapGesture {
 //            withAnimation {
