@@ -153,17 +153,24 @@ struct ContentView: View {
     
     
     var body: some View {
+        
+        VStack {
+            ColorCyclingRectangle(amount: colorCycle)
+            Slider(value: $colorCycle)
+        }
+        
+        
 //        Checkerboard(rows: rows, columns: columns).onTapGesture {
 //            withAnimation(.linear(duration: 3)) {
 //                self.rows = 8
 //                self.columns = 16
 //            }
 //        }
-        Arrow().stroke(Color.red, style: StrokeStyle(lineWidth: self.lineWidth, lineCap: .round, lineJoin: .round)).frame(width: 200, height: 200).onTapGesture {
-            withAnimation {
-                self.lineWidth = self.lineWidth + 5
-            }
-        }
+//        Arrow().stroke(Color.red, style: StrokeStyle(lineWidth: self.lineWidth, lineCap: .round, lineJoin: .round)).frame(width: 200, height: 200).onTapGesture {
+//            withAnimation {
+//                self.lineWidth = self.lineWidth + 5
+//            }
+//        }
         
 //        Trapezoid(insetAmount: insetAmount).frame(width: 200, height: 100).onTapGesture {
 //            withAnimation {
