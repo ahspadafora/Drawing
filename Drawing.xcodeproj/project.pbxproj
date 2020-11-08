@@ -13,6 +13,7 @@
 		BA907B44254E79BD009CC012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA907B43254E79BD009CC012 /* Assets.xcassets */; };
 		BA907B47254E79BD009CC012 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA907B46254E79BD009CC012 /* Preview Assets.xcassets */; };
 		BA907B4A254E79BD009CC012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA907B48254E79BD009CC012 /* LaunchScreen.storyboard */; };
+		BA907B52254E9A95009CC012 /* ColorCyclingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA907B51254E9A95009CC012 /* ColorCyclingCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BA907B46254E79BD009CC012 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA907B49254E79BD009CC012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA907B4B254E79BD009CC012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA907B51254E9A95009CC012 /* ColorCyclingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BA907B3D254E79B9009CC012 /* AppDelegate.swift */,
 				BA907B3F254E79B9009CC012 /* SceneDelegate.swift */,
 				BA907B41254E79B9009CC012 /* ContentView.swift */,
+				BA907B51254E9A95009CC012 /* ColorCyclingCircle.swift */,
 				BA907B43254E79BD009CC012 /* Assets.xcassets */,
 				BA907B48254E79BD009CC012 /* LaunchScreen.storyboard */,
 				BA907B4B254E79BD009CC012 /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA907B3E254E79B9009CC012 /* AppDelegate.swift in Sources */,
+				BA907B52254E9A95009CC012 /* ColorCyclingCircle.swift in Sources */,
 				BA907B40254E79B9009CC012 /* SceneDelegate.swift in Sources */,
 				BA907B42254E79B9009CC012 /* ContentView.swift in Sources */,
 			);
